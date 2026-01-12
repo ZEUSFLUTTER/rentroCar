@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import MyBookings from './pages/MyBookings'
 import Cars from './pages/Cars'
 import CarDetails from './pages/CarDetails'
+import Footer from './components/Footer'
 export const App = () => {
 
   const [showLogin , setShowLogin] = useState(false)
@@ -19,6 +20,8 @@ export const App = () => {
       <Route path='/cars' element={<Cars/>}/>
       <Route path='/my-bookings' element={<MyBookings/>}/>
     </Routes>
+
+    {!isOwnerPath && <Footer/>}
     </>
   )
 }
